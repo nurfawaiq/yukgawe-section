@@ -60,6 +60,7 @@ $routes->delete('groups/delete2/(:any)', 'Groups::delete2/$1');
 $routes->delete('groups/delete2', 'Groups::delete2');
 $routes->presenter('groups', ['filter' => 'isLoggedIn']);
 
+$routes->get('contacts/export', 'Contacts::export');
 $routes->resource('contacts', ['filter' => 'isLoggedIn']);
 
 /*

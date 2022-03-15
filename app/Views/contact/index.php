@@ -46,6 +46,19 @@
             </div>
             <div class="float-right ml-2">
               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+
+              <?php
+              $request = \Config\Services::request();
+              $keyword = $request->getGet('keyword');
+              if($keyword != '') {
+                $param = "?keyword=".$keyword;
+              } else {
+                $param = "";
+              }
+              ?>
+              <a href="<?=site_url('contacts/export'.$param)?>" class="btn btn-primary">
+                <i class="fas fa-file-download"></i> Export Excel
+              </a>
             </div>
           </form>
         </div>
