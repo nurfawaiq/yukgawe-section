@@ -183,4 +183,37 @@ class Contacts extends ResourceController
 		exit();
 	}
 
+	public function import()
+	{
+		$file = $this->request->getFile('file_excel');
+		$extension = $file->getClientExtension();
+		if($extension == 'xlsx' || $extension == 'xls') {
+			if($extension == 'xls') {
+				$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+			} else {
+				$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+			}
+			$spreadsheet = $reader->load($file);
+			$contacts = $spreadsheet->getActiveSheet()->toArray();
+			foreach ($contacts as $key => $value) {
+				if($key == 0) {
+					continue;
+				}
+				$data = [
+					'name_contact' => $value[1],
+					'name_alias' => $value[2],
+					'phone' => $value[3],
+					'email' => $value[4],
+					'address' => $value[5],
+					'info_contact' => $value[6],
+					'id_group' => 0,
+				];
+				$this->contact->insert($data);
+			}
+			return redirect()->back()->with('success', 'Data Excel Berhasil Diimport');
+		} else {
+			return redirect()->back()->with('error', 'Format File Tidak Sesuai');
+		}
+	}
+
 }

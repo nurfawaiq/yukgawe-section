@@ -59,6 +59,20 @@
               <a href="<?=site_url('contacts/export'.$param)?>" class="btn btn-primary">
                 <i class="fas fa-file-download"></i> Export Excel
               </a>
+
+              <div class="dropdown d-inline">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-file-upload"></i> Import Excel
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item has-icon" href="<?=base_url('contacts-example-import.xlsx')?>">
+                    <i class="fas fa-file-excel"></i> Download Example
+                  </a>
+                  <a class="dropdown-item has-icon" href="" data-toggle="modal" data-target="#modal-import-contact">
+                    <i class="fas fa-file-import"></i> Upload File
+                  </a>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -116,4 +130,31 @@
 
     </div>
   </section>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal-import-contact">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Import Contacts</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="<?=site_url('contacts/import')?>" method="post" enctype="multipart/form-data">
+          <div class="modal-body">
+            <label>File Excel</label>
+            <div class="custom-file">
+              <?= csrf_field() ?>
+              <input type="file" name="file_excel" class="custom-file-input" id="file_excel" required>
+              <label for="file_excel" class="custom-file-label">Pilih File</label>
+            </div>
+          </div>
+          <div class="modal-footer bg-whitesmoke br">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 <?= $this->endSection() ?>
