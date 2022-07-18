@@ -90,7 +90,6 @@ vendor/
 #-------------------------
 
 # Modules Testing
-_modules/*
 
 # phpenv local config
 .php-version
@@ -103,7 +102,6 @@ _modules/*
 nbproject/
 build/
 nbbuild/
-dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
@@ -124,6 +122,5 @@ nb-configuration.xml
 /results/
 /phpunit*.xml
 /.phpunit.*.cache
-
 
 composer.lock
