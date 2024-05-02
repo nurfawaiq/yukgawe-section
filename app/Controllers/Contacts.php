@@ -206,7 +206,7 @@ class Contacts extends ResourceController
 					'email' => $value[4],
 					'address' => $value[5],
 					'info_contact' => $value[6],
-					'id_group' => 0,
+					'id_group' => 1,
 				];
 				$this->contact->insert($data);
 			}

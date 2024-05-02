@@ -16,7 +16,7 @@ class ContactSeeder extends Seeder
 				'phone' => $faker->phoneNumber,
 				'email' => $faker->freeEmail,
 				'address' => $faker->address,
-				'id_group' => 6,
+				'id_group' => 1,
 				'created_at' => \CodeIgniter\I18n\Time::now(),
 			];
 			$this->db->table('contacts')->insert($data);
