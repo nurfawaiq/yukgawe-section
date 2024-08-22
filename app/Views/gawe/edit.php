@@ -1,7 +1,7 @@
 <?= $this->extend('layout/default') ?>
 
 <?= $this->section('title') ?>
-<title>Update Gawe &mdash; yukNikah</title>
+<title>Update Gawe &mdash; yukGawe</title>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -20,27 +20,27 @@
           <h4>Edit Gawe / Acara</h4>
         </div>
         <div class="card-body col-md-6">
-          <?php $validation =  \Config\Services::validation(); ?>
+          <?php $errors = validation_errors(); ?>
           <form action="<?=site_url('gawe/'.$gawe->id_gawe)?>" method="post" autocomplete="off">
             <?= csrf_field() ?>
             <input type="hidden" name="_method" value="PUT">
             <div class="form-group">
                 <label>Nama Gawe / Acara *</label>
-                <input type="text" name="name_gawe" value="<?=old('name_gawe', $gawe->name_gawe)?>" class="form-control <?=$validation->hasError('name_gawe') ? 'is-invalid' : null?>">
+                <input type="text" name="name_gawe" value="<?=old('name_gawe', $gawe->name_gawe)?>" class="form-control <?=isset($errors['name_gawe']) ? 'is-invalid' : null?>">
                 <div class="invalid-feedback">
-                  <?=$validation->getError('name_gawe')?>
+                  <?=$errors['name_gawe'] ?? null?>
                 </div>
             </div>
             <div class="form-group">
                 <label>Tanggal Acara *</label>
-                <input type="date" name="date_gawe" value="<?=old('date_gawe', $gawe->date_gawe)?>" class="form-control <?=$validation->hasError('date_gawe') ? 'is-invalid' : null?>">
+                <input type="date" name="date_gawe" value="<?=old('date_gawe', $gawe->date_gawe)?>" class="form-control <?=isset($errors['date_gawe']) ? 'is-invalid' : null?>">
                 <div class="invalid-feedback">
-                  <?=$validation->getError('date_gawe')?>
+                  <?=$errors['date_gawe'] ?? null?>
                 </div>
             </div>
             <div class="form-group">
                 <label>Info</label>
-                <textarea name="info_gawe" class="form-control"><?=$gawe->info_gawe?></textarea>
+                <textarea name="info_gawe" class="form-control"><?=old('info_gawe', $gawe->info_gawe)?></textarea>
             </div>
             <div>
                 <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Save</button>

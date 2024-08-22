@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <?= $this->renderSection('title') ?>
+  <link rel="shortcut icon" href="<?=base_url()?>template/assets/img/favicon.png"/>
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>template/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>template/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>template/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/style.css">
-  <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/components.css">
+  <link rel="stylesheet" href="<?=base_url()?>template/assets/css/style.css">
+  <link rel="stylesheet" href="<?=base_url()?>template/assets/css/components.css">
 </head>
 
 <body>
@@ -48,19 +49,19 @@
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>/template/assets/img/products/product-3-50.png" alt="product">
+                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>template/assets/img/products/product-3-50.png" alt="product">
                   oPhone S9 Limited Edition
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>/template/assets/img/products/product-2-50.png" alt="product">
+                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>template/assets/img/products/product-2-50.png" alt="product">
                   Drone X2 New Gen-7
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>/template/assets/img/products/product-1-50.png" alt="product">
+                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>template/assets/img/products/product-1-50.png" alt="product">
                   Headphone Blitz
                 </a>
               </div>
@@ -97,7 +98,7 @@
               <div class="dropdown-list-content dropdown-list-message">
                 <a href="#" class="dropdown-item dropdown-item-unread">
                   <div class="dropdown-item-avatar">
-                    <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle">
+                    <img alt="image" src="<?=base_url()?>template/assets/img/avatar/avatar-1.png" class="rounded-circle">
                     <div class="is-online"></div>
                   </div>
                   <div class="dropdown-item-desc">
@@ -108,7 +109,7 @@
                 </a>
                 <a href="#" class="dropdown-item dropdown-item-unread">
                   <div class="dropdown-item-avatar">
-                    <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-2.png" class="rounded-circle">
+                    <img alt="image" src="<?=base_url()?>template/assets/img/avatar/avatar-2.png" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
                     <b>Dedik Sugiharto</b>
@@ -118,7 +119,7 @@
                 </a>
                 <a href="#" class="dropdown-item dropdown-item-unread">
                   <div class="dropdown-item-avatar">
-                    <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-3.png" class="rounded-circle">
+                    <img alt="image" src="<?=base_url()?>template/assets/img/avatar/avatar-3.png" class="rounded-circle">
                     <div class="is-online"></div>
                   </div>
                   <div class="dropdown-item-desc">
@@ -129,7 +130,7 @@
                 </a>
                 <a href="#" class="dropdown-item">
                   <div class="dropdown-item-avatar">
-                    <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-4.png" class="rounded-circle">
+                    <img alt="image" src="<?=base_url()?>template/assets/img/avatar/avatar-4.png" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
                     <b>Ardian Rahardiansyah</b>
@@ -139,7 +140,7 @@
                 </a>
                 <a href="#" class="dropdown-item">
                   <div class="dropdown-item-avatar">
-                    <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-5.png" class="rounded-circle">
+                    <img alt="image" src="<?=base_url()?>template/assets/img/avatar/avatar-5.png" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
                     <b>Alfa Zulkarnain</b>
@@ -213,7 +214,7 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <img alt="image" src="<?=base_url()?>template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block">Hi, <?=userLogin()->name_user?></div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
@@ -234,10 +235,10 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <a href="<?=site_url()?>">yukNikah</a>
+                <a href="<?=site_url()?>">yukGawe</a>
             </div>
             <div class="sidebar-brand sidebar-brand-sm">
-                <a href="<?=site_url()?>">yN</a>
+                <a href="<?=site_url()?>">yG</a>
             </div>
             <ul class="sidebar-menu">
               <?= $this->include('layout/menu') ?>
@@ -268,17 +269,17 @@
   </div>
 
   <!-- General JS Scripts -->
-  <script src="<?=base_url()?>/template/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="<?=base_url()?>/template/node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="<?=base_url()?>/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="<?=base_url()?>/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
-  <script src="<?=base_url()?>/template/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
-  <script src="<?=base_url()?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?=base_url()?>template/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="<?=base_url()?>template/node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="<?=base_url()?>template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="<?=base_url()?>template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+  <script src="<?=base_url()?>template/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="<?=base_url()?>template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
   
-  <script src="<?=base_url()?>/template/assets/js/stisla.js"></script>
+  <script src="<?=base_url()?>template/assets/js/stisla.js"></script>
   <!-- JS Libraies -->
-  <script src="<?=base_url()?>/template/assets/js/scripts.js"></script>
-  <script src="<?=base_url()?>/template/assets/js/custom.js"></script>
+  <script src="<?=base_url()?>template/assets/js/scripts.js"></script>
+  <script src="<?=base_url()?>template/assets/js/custom.js"></script>
 
 </body>
 </html>

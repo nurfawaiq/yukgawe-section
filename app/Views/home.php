@@ -1,7 +1,7 @@
 <?= $this->extend('layout/default') ?>
 
 <?= $this->section('title') ?>
-<title>Home &mdash; yukNikah</title>
+<title>Home &mdash; yukGawe</title>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
