@@ -80,7 +80,7 @@
               Don't have an account? <a href="auth-register.html">Create One</a>
             </div>
             <div class="simple-footer">
-              Copyright &copy; YukCoding 2021
+              Copyright &copy; YukCoding <?=date('Y')?>
             </div>
           </div>
         </div>

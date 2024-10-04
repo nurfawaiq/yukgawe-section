@@ -245,7 +245,7 @@
             </ul>
 
             <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-              <a href="" class="btn btn-primary btn-block btn-icon-split">
+              <a href="https://youtube.com/@yukcoding" target="_blank" class="btn btn-primary btn-block btn-icon-split">
                 <i class="fas fa-rocket"></i> Subscribe YukCoding
               </a>
             </div>
